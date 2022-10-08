@@ -1,0 +1,11 @@
+import RPi.GPIO as GPIO
+import time
+GPIO.setmode(GPIO.BOARD) # set board mode to Broadcom
+GPIO.setup(40, GPIO.OUT) # set up pin 40
+while True:
+	GPIO.output(40, 1)# turn on pin 40
+	time.sleep(1)#delay for 1 seconds
+	GPIO.output(40,0)#turn off pin 40
+	time.sleep(1)#delay for 1 seconds
+
+-----------RPi Led light-------------------
